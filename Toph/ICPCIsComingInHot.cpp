@@ -3,23 +3,21 @@ using namespace std;
 
 int main(){
     string s;
-    int arr[10] = {0};
     cin>>s;
-
+    int num;
     for(int i = 0; i<s.size(); i++){
-       arr[s[i]]++;
-    }
-    
-    int mx = INT_MIN,indx;
-    for(int i =0; i<10 ;i++){
-        mx = max(arr[i],mx);
-    }
-    for(int i =0; i<10 ;i++){
-       if(mx == arr[i]){
-        indx = i;
+        bool flag = false;
+       for(int j =i+1; j<s.size(); j++){
+        if(s[i]==s[j]){
+            num = s[i];
+            flag = true;
+            break;
+        }
+       }
+       if(flag==true){
         break;
        }
     }
-    cout<<mx<<endl;
-    cout<<indx<<endl;
+    num -= 48;
+    cout<<num<<endl;  
 }
