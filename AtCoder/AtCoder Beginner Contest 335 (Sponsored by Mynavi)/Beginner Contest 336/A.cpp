@@ -16,5 +16,17 @@ int main(){
     for(int i =0; i<(n+3);i++){
         cout<<s2[i];
     }
-   
+    /*
+    this could be an approach better than before
+    
+    int n;
+    cin >> n;
+    cin.ignore();
+    string s = "L";
+    for(int i = 1; i <= n ; i++){
+       s += "o";
+    }
+    s += "ng";
+    cout << s;
+   */
 }
