@@ -7,12 +7,22 @@ int main()
     
     while(t--)
     {
-        string a[6];
-        cin>>a[6];
-        long long s1=0,s2=0;
-        s1 = a[0]+a[1]+a[2];
-        s2 = a[3]+a[4]+a[5];
-        if(s1==s2) cout << "yes" << endl;
-        else cout << "no" << endl;
+        string a, temp;
+        cin>>a;
+        int sum1 = 0, sum2 = 0;
+        for(int i = 0; i<a.size(); i++){
+            if(i<3){
+                sum1 += a[i] - 48;
+            }
+            else {
+                sum2 += a[i] - 48;
+            }
+        }
+        if(sum1 == sum2){
+            cout << "YES\n";
+        }
+        else{
+            cout << "NO\n";
+        }
     }
 }
