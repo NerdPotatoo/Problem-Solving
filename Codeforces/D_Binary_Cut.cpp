@@ -8,16 +8,18 @@ void solve()
     int t; cin >> t;
     while(t--)
     {
-        int ans = 1;
+        int ans = 1, f =0;
         string s; cin >> s;
-        for(int i = 0; i<s.size();i++)
+        for(int i = 0; i<s.size()-1;i++)
         {
-            if(s[i]=='1' && s[i+1] =='0'){
+            if(s[i]!=s[i+1]){
                 ans++;
-                
+                if(s[i] == '0' && s[i+1] == '1'){
+                    f = 1;
+                }
             }
         }
-        cout << ans << '\n';
+        cout << ans - f<< '\n';
     }
 }
  
