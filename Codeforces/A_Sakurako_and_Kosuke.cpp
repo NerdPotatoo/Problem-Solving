@@ -12,21 +12,24 @@ int32_t main()
 {
     fastIO;
     // CODE HERE
+    
     int t;
     cin>>t;
     while(t--)
     {
-        int n, m, k;
-        cin >> n >> m >>k;
-        int parts = n - (n/m);
-        if(n%m != 0){
-            int tmp = n%m - 1;
-            parts += tmp;
+        int i = 1, n, tmp, x = 0;
+        cin>>n;
+        while(1)
+        {
+            tmp = (2*i)-1;
+            if(i&1) tmp *= -1;
+            x += tmp;
+            i++;
+            if(x>n || x<(-n)) break;
         }
-
-        if(k>=parts || k == m || k == n) cout<<"NO\n";
-        else cout<<"YES\n";
-        
+       if(x<0) cout<<"Sakurako\n";
+       else cout<<"Kosuke\n"; 
     }
+    
     return 0;
 }

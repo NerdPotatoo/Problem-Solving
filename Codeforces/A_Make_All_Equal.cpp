@@ -16,17 +16,18 @@ int32_t main()
     cin>>t;
     while(t--)
     {
-        int n, m, k;
-        cin >> n >> m >>k;
-        int parts = n - (n/m);
-        if(n%m != 0){
-            int tmp = n%m - 1;
-            parts += tmp;
+        int n;
+        cin>>n;
+        vector<int> v(n);
+        vector<int> count(n+1, 0);
+        for(int i = 0; i<n ; i++)
+        {
+           cin>>v[i];
+           count[v[i]]++;
         }
-
-        if(k>=parts || k == m || k == n) cout<<"NO\n";
-        else cout<<"YES\n";
-        
+        int mx = INT_MIN;
+        for(int i : count) mx = max(mx,i);
+        cout<<n-mx<<endl;
     }
     return 0;
 }

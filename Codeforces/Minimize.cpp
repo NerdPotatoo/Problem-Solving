@@ -16,17 +16,19 @@ int32_t main()
     cin>>t;
     while(t--)
     {
-        int n, m, k;
-        cin >> n >> m >>k;
-        int parts = n - (n/m);
-        if(n%m != 0){
-            int tmp = n%m - 1;
-            parts += tmp;
+        int a, b, tmp;
+        cin>>a>>b;
+        int ans = INT_MAX;
+        for(int i = a; i<=b; i++)
+        {
+            tmp = (i-a) + (b-i);
+            if(tmp<=ans)
+            {
+                ans = tmp;
+            }
+            else break;
         }
-
-        if(k>=parts || k == m || k == n) cout<<"NO\n";
-        else cout<<"YES\n";
-        
+        cout<< ans<<endl;
     }
     return 0;
 }

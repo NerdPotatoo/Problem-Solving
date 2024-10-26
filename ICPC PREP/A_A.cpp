@@ -12,21 +12,16 @@ int32_t main()
 {
     fastIO;
     // CODE HERE
-    int t;
-    cin>>t;
-    while(t--)
+    string s;
+    cin>>s;
+    for(int i = 0; i<3; i++)
     {
-        int n, m, k;
-        cin >> n >> m >>k;
-        int parts = n - (n/m);
-        if(n%m != 0){
-            int tmp = n%m - 1;
-            parts += tmp;
+        if(s[i] == '7') 
+        {
+            cout<<"Yes\n";
+            return 0;
         }
-
-        if(k>=parts || k == m || k == n) cout<<"NO\n";
-        else cout<<"YES\n";
-        
     }
+    cout<<"No\n";
     return 0;
 }

@@ -2,7 +2,7 @@
 using namespace std;
 #define ll long long
 
-ll M = 10e6 + 3;
+ll M = 1e6 + 3;
 
 ll powMod(ll a,ll b,ll M){
     a %= M;

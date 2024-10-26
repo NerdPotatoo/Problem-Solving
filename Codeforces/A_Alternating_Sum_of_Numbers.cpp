@@ -16,17 +16,15 @@ int32_t main()
     cin>>t;
     while(t--)
     {
-        int n, m, k;
-        cin >> n >> m >>k;
-        int parts = n - (n/m);
-        if(n%m != 0){
-            int tmp = n%m - 1;
-            parts += tmp;
+        int x, n, sum = 0;
+        cin>>n;
+        for(int i = 1; i<=n; i++)
+        {
+            cin>>x;
+            if(i%2==0) sum -= x;
+            else sum += x;
         }
-
-        if(k>=parts || k == m || k == n) cout<<"NO\n";
-        else cout<<"YES\n";
-        
+        cout<<sum<<endl;
     }
     return 0;
 }

@@ -8,16 +8,15 @@ int32_t main()
 {
     fastIO;
     // CODE HERE
-    int TT;
-    cin>>TT;
-    while(TT--)
+    int t;
+    cin>>t;
+    while(t--)
     {
-        ll a,b, n, m, t, rem;
-        cin>>a>>b>>n>>m;
-        t = n/(m+1);
-        rem = n - t*(m+1);
-        ll ans = t* min(a*m, b*(m+1)) + rem*min(a,b);
-        cout<<ans<<endl; 
+        int a;
+        cin>>a;
+        if(360%(180-a) == 0) cout<<"YES\n";
+        else cout<<"NO\n";
     }
+
     return 0;
 }

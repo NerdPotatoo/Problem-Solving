@@ -22,7 +22,7 @@ int32_t main()
             bool ok = true;
             for(int i = 1; i<n-1; i++)
             {
-                if(s[i]==0){
+                if(s[i]== '0' ){
                     ok = false;
                     break;
                 }

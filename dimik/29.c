@@ -5,10 +5,11 @@ int main()
     int T;
 
     scanf("%d",&T);
+    getchar();
     while(T--)
     {
-
-        scanf("%s",&ch);
+        
+        scanf("%c",&ch);
         if(ch>= 'a' && ch<= 'z')
         {
             printf("Lowercase Character\n");
@@ -25,6 +26,7 @@ int main()
         {
             printf("Special Character\n");
         }
+        printf("%d\n", T);
     }
     return 0;
 }
